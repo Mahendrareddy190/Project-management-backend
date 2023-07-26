@@ -8,10 +8,13 @@ const router = require("./routers/project_data");
 
 mongoose.set("strictQuery", false);
 mongoose
-  .connect("mongodb://0.0.0.0:27017/project_data", {
-    useUnifiedTopology: true,
-    useNewUrlParser: true,
-  })
+  .connect(
+    "mongodb+srv://perammahendra60:mahi123@projectmanagement.8loc9uv.mongodb.net/?retryWrites=true&w=majority",
+    {
+      useUnifiedTopology: true,
+      useNewUrlParser: true,
+    }
+  )
   .then(() => {
     console.log("db connected");
   })
